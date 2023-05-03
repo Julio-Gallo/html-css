@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Códigos Fontes pré-formatação</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem Javascript,dentro da tag code(ajusta as fontes para o mesmo espaçamento), quando esta é inserida na tag pre o codigo é visto indentado no site.</p>
+    <pre>
+        <code>
+            num = int(input('Digite um númeto'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é ÍMPAR')
+            print('Fim do programa')
+        </code>
+    </pre>
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de um amigo: <q>O computador é um burro muito rápido.</q> Utiliza-se a tag q (do Inglês quote, que significa citar) antes do fechamento do parágrafo p.</p>
+    <h2>Citações completas</h2>
+    <p>Para tal usa-se a tag blockquote que deslocará o texto, na abertura do tag complementa-se com cite e o endereço da referência</p>
+    <p>Segundo David A. Crowder no seu livro HTML para leigos: </p>
+    <blockquote cite="https://www.google.com.br/books/edition/Construindo_Web_Sites_Para_Leigos_Tradu/xlLcAwAAQBAJ?hl=pt-BR&gbpv=1&dq=html+para+leigos&printsec=frontcover">
+        Um site bonito que não funciona bem é inútil.
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascating Style Sheets">CSS</abbr> Utiliza-se a tag abbr e nas aspas o significado da sigla, que aparecerá quando passamos o mouse por ela.</p>
+    <h2>Texto invertido</h2>
+    <p> <bdo dir="rtl">Funciona com a tag bdo e entre aspas rtl ou rtr</bdo></p>
+    
+</body>
+</html>
