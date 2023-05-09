@@ -13,11 +13,28 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+        /* Para fixar os titulos das colunas: 1 -Em table, position relative.
+        2- criar thead > tr >th {position sticky, top -1px, background color = background color do thead}  */
+        tbody tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+        /* Ou somente odd 2n, sem even colocando cor nas linhas pares do corpo - todo tr que está dentro do tbody sublasse nth-child 2n, de duas em duas, 3n de três em três... podendo definir fontfamily e demais configurações para a respectiva linha.*/
+        tbody tr:nth-child(even) {
+            background-color: rgb(255, 255, 255);
+            text-decoration: none;
         }
 
         thead, tfoot {
             background-color: grey;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
         }
 
         td.num {
@@ -33,19 +50,22 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- ANATOMIA PARA TABELAS GRANDES
+        CAPTION
         TABLE
             THEAD
-                TR, TD, TH
+                TR, TD(dados), TH(títulos das linhas ou colunas)
             TBODY
                 TR, TD, TH
             TFOOT
                 TR, TD, TH
     -->
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
            <tr>
-            <th>Estado</th>
-            <th>População</th>            
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px
+            ;">População</th>            
            </tr> 
         </thead>
         <tbody>
@@ -134,7 +154,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
