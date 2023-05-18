@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Teste de formulário</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
         <p>
             <label for="iest">Estado</label>
             <select name="estado" id="iest">
@@ -25,6 +25,25 @@
                 </optgroup>
             </select>
         </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="PROF">Professor</option>
+                <option value="DEV">Desenvolvedor</option>
+                <!--Elemento datalist tipo texto com nome diferente de id é somente para usuário digitar sua opção, com list com mesmo nome da id do datalist apresenta também as opções contendo os values e as opções digitadas para os usuários, além das digitações. Retidando-se os values ficam somente as opções digitadas pelo dev. -->
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem:</label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            <!--O elemanto textarea possibilita o usuário deixar seu texto, tem tamanho flexível na tela com qtde de linhas infinita e quando for utilizada devemos usar tbm o metodo post, pela limitação do get em 3k.-->
+        </p>
+
+      
+
 
         <p>
             <input type="submit" value="Enviar">
