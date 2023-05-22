@@ -3,7 +3,7 @@
 /*Versão mobile first*/
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace
     font-size: 1em;
     margin: 0px;
     padding: 0px;
@@ -11,7 +11,7 @@
     
 }
 
-html {    
+html {     
     height: 100vh;
 }
 
@@ -22,8 +22,8 @@ body {
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.851);
-    width: 90vw;
+    background-color: rgba(255, 255, 255, 0.604);
+    width: 40vw;
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
